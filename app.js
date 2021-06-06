@@ -7,9 +7,9 @@ const routes = require('./routes/routes.js');
 const app = express();
 app.use(express.json());
 
-app.use(express.static('./public'));
+app.use(express.static('client/build'));
 
-app.use(express.urlencoded({extended: true}));
+// app.use(express.urlencoded({extended: true}));
 mongoose.connect(process.env.MONGODB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
